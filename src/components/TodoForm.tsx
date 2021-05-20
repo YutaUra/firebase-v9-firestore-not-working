@@ -29,7 +29,6 @@ export const TodoForm = ({
     reset,
     handleSubmit,
     formState: { errors },
-    setValue,
   } = useForm<TodoFormField>({
     defaultValues,
   })
