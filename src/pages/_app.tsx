@@ -1,12 +1,14 @@
 import { ChakraProvider } from '@chakra-ui/react'
-
-import theme from '../theme'
 import { AppProps } from 'next/app'
+import { RecoilRoot } from 'recoil'
+import theme from '../theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider resetCSS theme={theme}>
-      <Component {...pageProps} />
+      <RecoilRoot>
+        <Component {...pageProps} />
+      </RecoilRoot>
     </ChakraProvider>
   )
 }
